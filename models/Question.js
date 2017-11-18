@@ -18,6 +18,14 @@ class Question{
     this.content = content
   }
 
+  insert(){
+    const sql = 'INSERT INTO questions (content) VALUES ?' //check this
+    const self = this
+    
+    db.run(sql,[self.content])
+    
+  }
+
 }
 
 module.exports = Question;
