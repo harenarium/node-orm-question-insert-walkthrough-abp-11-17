@@ -23,7 +23,7 @@ class Question{
     const self = this
 
     return new Promise(resolve){
-      db.run(sql,[self.content],function(){
+      db.run(sql,[${self.content}],function(){
         self.id = this.id
         resolve(self)
       })
