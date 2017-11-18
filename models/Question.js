@@ -7,10 +7,10 @@ class Question{
         id INTEGER PRIMARY KEY,
         content TEXT
       )`
-      
+
       db.run(sql, function(){
         resolve("questions table created")
-      })      
+      })
     })
   }
 
@@ -22,8 +22,14 @@ class Question{
     const sql = 'INSERT INTO questions (content) VALUES ?' //check this
     const self = this
     
-    db.run(sql,[self.content])
+    return new Promise(resolve){
+      db.run(sql,[self.content],function(){
+        self.id = this.id
+        resolve(self)
+      })
+    }
     
+
   }
 
 }
