@@ -20,7 +20,7 @@ class Question{
 
   insert(){
 
-     const sql = 'INSERT INTO questions (content) VALUES ?' //check this
+     const sql = 'INSERT INTO questions (content) VALUES (?)' //need () around ?
      const self = this
 
     return new Promise(function(resolve){ //promise(function(resolve){}) two sets of ()
@@ -29,8 +29,6 @@ class Question{
          resolve(self)
        })
     })
-
-
   }
 
 }
