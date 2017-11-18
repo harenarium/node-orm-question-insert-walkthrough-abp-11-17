@@ -23,12 +23,12 @@ class Question{
      const sql = 'INSERT INTO questions (content) VALUES ?' //check this
     // const self = this
     //
-     return new Promise(resolve){}
+    return new Promise(function(resolve){
     //   db.run(sql,[${self.content}],function(){
     //     self.id = this.id
       //   resolve(self)
     //   })
-     //}
+    })
 
 
   }
