@@ -19,6 +19,7 @@ class Question{
   }
 
   insert(){
+    /*
     const sql = 'INSERT INTO questions (content) VALUES ?' //check this
     const self = this
 
@@ -28,7 +29,7 @@ class Question{
         resolve(self)
       })
     }
-
+    */
 
   }
 
